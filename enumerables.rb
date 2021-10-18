@@ -121,8 +121,32 @@ class Array
         new_arr
     end
 
-    
+    def my_join(separator="")
+        new_str = ""
+        
+        self.each do |ele|
+            new_str += ele + separator
+        end
+        
+        if separator == ""
+            new_str
+        else
+            new_str[0...-1]
+        end
+    end
+
+    def my_reverse
+        new_arr = []
+
+        i = self.length-1
+        while i >= 0
+            new_arr << self[i]
+            i -= 1
+        end
+
+        new_arr
+    end
+
 
 end
-
 
